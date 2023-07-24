@@ -1,0 +1,666 @@
+Last login: Mon Jul 24 14:57:49 on ttys003
+-bash: /Users/nicolaskojima/.bash_profile: line 34: unexpected EOF while looking for matching `"'
+-bash: /Users/nicolaskojima/.bash_profile: line 35: syntax error: unexpected end of file
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+WARNING: PHP is not recommended
+PHP is included in macOS for compatibility with legacy software.
+Future versions of macOS will not include PHP.
+PHP 7.3.24-(to be removed in future macOS) (cli) (built: Jun 17 2021 21:41:15) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.24, Copyright (c) 1998-2018 Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew uninstall PHP 7.3.24
+Error: No such keg: /usr/local/Cellar/php
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew uninstall php 7.3.24 -
+Error: No such keg: /usr/local/Cellar/php
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew uninstall php 7.3.24
+Error: No such keg: /usr/local/Cellar/php
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ sudo mount -uw/
+¥Password:
+Sorry, try again.
+Password:
+mount: illegal option -- /
+usage: mount [-dfruvw] [-o options] [-t external_type] special mount_point
+       mount [-adfruvw] [-t external_type]
+       mount [-dfruvw] special | mount_point
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew install php 8.0
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+##################################################################################################################################################################################################### 100.0%==> Downloading https://formulae.brew.sh/api/cask.jws.json
+##################################################################################################################################################################################################### 100.0%Warning: No available formula with the name "8.0".
+==> Searching for similarly named formulae and casks...
+==> Formulae
+atari800                                 mysql@8.0 ✔                              php@8.0                                  shivammathur/php/php@8.0-debug           z80dasm
+mysql-client@8.0                         percona-server@8.0                       shivammathur/php/php@8.0                 z80asm
+
+To install atari800, run:
+  brew install atari800
+
+==> Casks
+tic80
+
+To install tic80, run:
+  brew install --cask tic80
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v¥
+WARNING: PHP is not recommended
+PHP is included in macOS for compatibility with legacy software.
+Future versions of macOS will not include PHP.
+PHP 7.3.24-(to be removed in future macOS) (cli) (built: Jun 17 2021 21:41:15) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.24, Copyright (c) 1998-2018 Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew install php@8.0
+Warning: php@8.0 has been deprecated because it is a versioned formula!
+==> Fetching php@8.0
+==> Downloading https://ghcr.io/v2/homebrew/core/php/8.0/manifests/8.0.29_1
+Already downloaded: /Users/nicolaskojima/Library/Caches/Homebrew/downloads/6a95e5a73ff25aa8cc5b21382052a3bdb2d340ffd190b92a156b5ee903f8364f--php@8.0-8.0.29_1.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/php/8.0/blobs/sha256:ab51096d0a03564801616949f019bcfd22d0a1680daa4d9238a1410bc00281cd
+Already downloaded: /Users/nicolaskojima/Library/Caches/Homebrew/downloads/33a2145f81810cadd98936fd1b94fbdf94a9fa88b77c01773babed10d7515838--php@8.0--8.0.29_1.big_sur.bottle.tar.gz
+==> Pouring php@8.0--8.0.29_1.big_sur.bottle.tar.gz
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set php_ini /usr/local/etc/php/8.0/php.ini system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set php_dir /usr/local/share/pear@8.0 system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set doc_dir /usr/local/share/pear@8.0/doc system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set ext_dir /usr/local/lib/php/pecl/20200930 system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set bin_dir /usr/local/opt/php@8.0/bin system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set data_dir /usr/local/share/pear@8.0/data system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set cfg_dir /usr/local/share/pear@8.0/cfg system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set www_dir /usr/local/share/pear@8.0/htdocs system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set man_dir /usr/local/share/man system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set test_dir /usr/local/share/pear@8.0/test system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set php_bin /usr/local/opt/php@8.0/bin/php system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear update-channels
+==> Caveats
+To enable PHP in Apache add the following to httpd.conf and restart Apache:
+    LoadModule php_module /usr/local/opt/php@8.0/lib/httpd/modules/libphp.so
+
+    <FilesMatch \.php$>
+        SetHandler application/x-httpd-php
+    </FilesMatch>
+
+Finally, check DirectoryIndex includes index.php
+    DirectoryIndex index.php index.html
+
+The php.ini and php-fpm.ini file can be found in:
+    /usr/local/etc/php/8.0/
+
+php@8.0 is keg-only, which means it was not symlinked into /usr/local,
+because this is an alternate version of another formula.
+
+If you need to have php@8.0 first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/php@8.0/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="/usr/local/opt/php@8.0/sbin:$PATH"' >> ~/.zshrc
+
+For compilers to find php@8.0 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/php@8.0/lib"
+  export CPPFLAGS="-I/usr/local/opt/php@8.0/include"
+
+To start php@8.0 now and restart at login:
+  brew services start php@8.0
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/php@8.0/sbin/php-fpm --nodaemonize
+==> Summary
+🍺  /usr/local/Cellar/php@8.0/8.0.29_1: 500 files, 78MB
+==> Running `brew cleanup php@8.0`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+WARNING: PHP is not recommended
+PHP is included in macOS for compatibility with legacy software.
+Future versions of macOS will not include PHP.
+PHP 7.3.24-(to be removed in future macOS) (cli) (built: Jun 17 2021 21:41:15) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.24, Copyright (c) 1998-2018 Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew update
+Already up-to-date.
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew upgrade
+==> Upgrading 4 outdated packages:
+six 1.16.0_2 -> 1.16.0_3
+virtualenv 20.23.1 -> 20.24.1
+protobuf 21.12 -> 23.4
+berkeley-db 18.1.40 -> 18.1.40_2
+==> Fetching berkeley-db
+==> Downloading https://ghcr.io/v2/homebrew/core/berkeley-db/manifests/18.1.40_2
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/berkeley-db/blobs/sha256:5f4917a225a5986f682c85dbcfb6503024738d6eadb637161210ae621c26f457
+##################################################################################################################################################################################################### 100.0%
+==> Fetching six
+==> Downloading https://ghcr.io/v2/homebrew/core/six/manifests/1.16.0_3
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/six/blobs/sha256:0dee50367c6facbfc8f65e8a82bcd3e08d43da262b1adff6ccf943ef5bfaf313
+##################################################################################################################################################################################################### 100.0%
+==> Fetching virtualenv
+==> Downloading https://ghcr.io/v2/homebrew/core/virtualenv/manifests/20.24.1
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/virtualenv/blobs/sha256:c6771553b6351f04c118afaef8584370cf69d3ca0c1ab13dc0e6e4f7a309ac51
+##################################################################################################################################################################################################### 100.0%
+==> Fetching dependencies for protobuf: abseil
+==> Fetching abseil
+==> Downloading https://ghcr.io/v2/homebrew/core/abseil/manifests/20230125.3-1
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/abseil/blobs/sha256:a621f54dec9a4f409592536179c78e62ca67add70b6a06956a3b2802240a7f98
+##################################################################################################################################################################################################### 100.0%
+==> Fetching protobuf
+==> Downloading https://ghcr.io/v2/homebrew/core/protobuf/manifests/23.4
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/protobuf/blobs/sha256:774b921c6373919e653637f28fe9b485505ecc4f46852c547898d585af599dbc
+##################################################################################################################################################################################################### 100.0%
+==> Upgrading berkeley-db
+  18.1.40 -> 18.1.40_2 
+
+==> Pouring berkeley-db--18.1.40_2.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/berkeley-db/18.1.40_2: 44 files, 6.2MB
+==> Running `brew cleanup berkeley-db`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /usr/local/Cellar/berkeley-db/18.1.40... (44 files, 6.5MB)
+==> Upgrading six
+  1.16.0_2 -> 1.16.0_3 
+
+==> Pouring six--1.16.0_3.all.bottle.tar.gz
+🍺  /usr/local/Cellar/six/1.16.0_3: 20 files, 122.4KB
+==> Running `brew cleanup six`...
+Removing: /usr/local/Cellar/six/1.16.0_2... (20 files, 122.3KB)
+==> Upgrading virtualenv
+  20.23.1 -> 20.24.1 
+
+==> Pouring virtualenv--20.24.1.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/virtualenv/20.24.1: 930 files, 14.2MB
+==> Running `brew cleanup virtualenv`...
+Removing: /usr/local/Cellar/virtualenv/20.23.1... (930 files, 14.4MB)
+Removing: /Users/nicolaskojima/Library/Caches/Homebrew/virtualenv--20.23.1... (6.3MB)
+==> Upgrading protobuf
+  21.12 -> 23.4 
+
+==> Installing dependencies for protobuf: abseil
+==> Installing protobuf dependency: abseil
+==> Pouring abseil--20230125.3.big_sur.bottle.1.tar.gz
+🍺  /usr/local/Cellar/abseil/20230125.3: 723 files, 9.8MB
+==> Installing protobuf
+==> Pouring protobuf--23.4.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/protobuf/23.4: 389 files, 12.2MB
+==> Running `brew cleanup protobuf`...
+Removing: /usr/local/Cellar/protobuf/21.12... (287 files, 19.2MB)
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+WARNING: PHP is not recommended
+PHP is included in macOS for compatibility with legacy software.
+Future versions of macOS will not include PHP.
+PHP 7.3.24-(to be removed in future macOS) (cli) (built: Jun 17 2021 21:41:15) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.24, Copyright (c) 1998-2018 Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew install php@8.0
+Warning: php@8.0 8.0.29_1 is already installed and up-to-date.
+To reinstall 8.0.29_1, run:
+  brew reinstall php@8.0
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+WARNING: PHP is not recommended
+PHP is included in macOS for compatibility with legacy software.
+Future versions of macOS will not include PHP.
+PHP 7.3.24-(to be removed in future macOS) (cli) (built: Jun 17 2021 21:41:15) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.24, Copyright (c) 1998-2018 Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew reinstall php@8.0
+Warning: php@8.0 has been deprecated because it is a versioned formula!
+==> Fetching php@8.0
+==> Downloading https://ghcr.io/v2/homebrew/core/php/8.0/manifests/8.0.29_1
+Already downloaded: /Users/nicolaskojima/Library/Caches/Homebrew/downloads/6a95e5a73ff25aa8cc5b21382052a3bdb2d340ffd190b92a156b5ee903f8364f--php@8.0-8.0.29_1.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/php/8.0/blobs/sha256:ab51096d0a03564801616949f019bcfd22d0a1680daa4d9238a1410bc00281cd
+Already downloaded: /Users/nicolaskojima/Library/Caches/Homebrew/downloads/33a2145f81810cadd98936fd1b94fbdf94a9fa88b77c01773babed10d7515838--php@8.0--8.0.29_1.big_sur.bottle.tar.gz
+==> Reinstalling php@8.0 
+==> Pouring php@8.0--8.0.29_1.big_sur.bottle.tar.gz
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set php_ini /usr/local/etc/php/8.0/php.ini system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set php_dir /usr/local/share/pear@8.0 system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set doc_dir /usr/local/share/pear@8.0/doc system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set ext_dir /usr/local/lib/php/pecl/20200930 system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set bin_dir /usr/local/opt/php@8.0/bin system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set data_dir /usr/local/share/pear@8.0/data system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set cfg_dir /usr/local/share/pear@8.0/cfg system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set www_dir /usr/local/share/pear@8.0/htdocs system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set man_dir /usr/local/share/man system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set test_dir /usr/local/share/pear@8.0/test system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear config-set php_bin /usr/local/opt/php@8.0/bin/php system
+==> /usr/local/Cellar/php@8.0/8.0.29_1/bin/pear update-channels
+==> Caveats
+To enable PHP in Apache add the following to httpd.conf and restart Apache:
+    LoadModule php_module /usr/local/opt/php@8.0/lib/httpd/modules/libphp.so
+
+    <FilesMatch \.php$>
+        SetHandler application/x-httpd-php
+    </FilesMatch>
+
+Finally, check DirectoryIndex includes index.php
+    DirectoryIndex index.php index.html
+
+The php.ini and php-fpm.ini file can be found in:
+    /usr/local/etc/php/8.0/
+
+php@8.0 is keg-only, which means it was not symlinked into /usr/local,
+because this is an alternate version of another formula.
+
+If you need to have php@8.0 first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/php@8.0/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="/usr/local/opt/php@8.0/sbin:$PATH"' >> ~/.zshrc
+
+For compilers to find php@8.0 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/php@8.0/lib"
+  export CPPFLAGS="-I/usr/local/opt/php@8.0/include"
+
+To start php@8.0 now and restart at login:
+  brew services start php@8.0
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/php@8.0/sbin/php-fpm --nodaemonize
+==> Summary
+🍺  /usr/local/Cellar/php@8.0/8.0.29_1: 500 files, 78MB
+==> Running `brew cleanup php@8.0`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew services start php@8.0
+==> Successfully started `php@8.0` (label: homebrew.mxcl.php@8.0)
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew php -v
+Error: Unknown command: php
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+WARNING: PHP is not recommended
+PHP is included in macOS for compatibility with legacy software.
+Future versions of macOS will not include PHP.
+PHP 7.3.24-(to be removed in future macOS) (cli) (built: Jun 17 2021 21:41:15) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.24, Copyright (c) 1998-2018 Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ 
+  [Restored Jul 24, 2023 15:25:58]
+Last login: Mon Jul 24 15:25:48 on console
+-bash: /Users/nicolaskojima/.bash_profile: line 34: unexpected EOF while looking for matching `"'
+-bash: /Users/nicolaskojima/.bash_profile: line 35: syntax error: unexpected end of file
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+WARNING: PHP is not recommended
+PHP is included in macOS for compatibility with legacy software.
+Future versions of macOS will not include PHP.
+PHP 7.3.24-(to be removed in future macOS) (cli) (built: Jun 17 2021 21:41:15) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.24, Copyright (c) 1998-2018 Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew unlink php@7.3.24 
+Error: No such keg: /usr/local/Cellar/php@7.3.24
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew unlink php@7.3
+Error: No such keg: /usr/local/Cellar/php@7.3
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v 
+WARNING: PHP is not recommended
+PHP is included in macOS for compatibility with legacy software.
+Future versions of macOS will not include PHP.
+PHP 7.3.24-(to be removed in future macOS) (cli) (built: Jun 17 2021 21:41:15) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.24, Copyright (c) 1998-2018 Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ sudo rmdir -rf /usr/local/opt/php71
+Password:
+rmdir: illegal option -- r
+usage: rmdir [-p] directory ...
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew tap homebrew/dupes
+Error: homebrew/dupes was deprecated. This tap is now empty and all its contents were either deleted or migrated.
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew tap homebrew/versions
+Error: homebrew/versions was deprecated. This tap is now empty and all its contents were either deleted or migrated.
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew link php@7.3
+Error: No such keg: /usr/local/Cellar/php@7.3
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew link php@7.3.24 
+Error: No such keg: /usr/local/Cellar/php@7.3.24
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew link --ovewwrite --force php@8.0
+Usage: brew link, ln [options] installed_formula [...]
+
+Symlink all of formula's installed files into Homebrew's prefix. This is done
+automatically when you install formulae but can be useful for DIY installations.
+
+      --overwrite                  Delete files that already exist in the prefix
+                                   while linking.
+  -n, --dry-run                    List files which would be linked or deleted
+                                   by brew link --overwrite without actually
+                                   linking or deleting any files.
+  -f, --force                      Allow keg-only formulae to be linked.
+      --HEAD                       Link the HEAD version of the formula if it is
+                                   installed.
+  -d, --debug                      Display any debugging information.
+  -q, --quiet                      Make some output more quiet.
+  -v, --verbose                    Make some output more verbose.
+  -h, --help                       Show this message.
+Error: invalid option: --ovewwrite
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew link --overwrite --force php@8.0
+Linking /usr/local/Cellar/php@8.0/8.0.29_1... 25 symlinks created.
+
+If you need to have this software first in your PATH instead consider running:
+  echo 'export PATH="/usr/local/opt/php@8.0/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="/usr/local/opt/php@8.0/sbin:$PATH"' >> ~/.zshrc
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+WARNING: PHP is not recommended
+PHP is included in macOS for compatibility with legacy software.
+Future versions of macOS will not include PHP.
+PHP 7.3.24-(to be removed in future macOS) (cli) (built: Jun 17 2021 21:41:15) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.24, Copyright (c) 1998-2018 Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ echo 'export PATH="/usr/local/opt/php@8.0/bin:$PATH"' >> ~/.zshrc
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+WARNING: PHP is not recommended
+PHP is included in macOS for compatibility with legacy software.
+Future versions of macOS will not include PHP.
+PHP 7.3.24-(to be removed in future macOS) (cli) (built: Jun 17 2021 21:41:15) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.24, Copyright (c) 1998-2018 Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ which php
+/usr/local/bin/php
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ open 
+Usage: open [-e] [-t] [-f] [-W] [-R] [-n] [-g] [-h] [-s <partial SDK name>][-b <bundle identifier>] [-a <application>] [filenames] [--args arguments]
+Help: Open opens files from a shell.
+      By default, opens each file using the default application for that file.  
+      If the file is in the form of a URL, the file will be opened as a URL.
+Options: 
+      -a                    Opens with the specified application.
+      -b                    Opens with the specified application bundle identifier.
+      -e                    Opens with TextEdit.
+      -t                    Opens with default text editor.
+      -f                    Reads input from standard input and opens with TextEdit.
+      -F  --fresh           Launches the app fresh, that is, without restoring windows. Saved persistent state is lost, excluding Untitled documents.
+      -R, --reveal          Selects in the Finder instead of opening.
+      -W, --wait-apps       Blocks until the used applications are closed (even if they were already running).
+          --args            All remaining arguments are passed in argv to the application's main() function instead of opened.
+      -n, --new             Open a new instance of the application even if one is already running.
+      -j, --hide            Launches the app hidden.
+      -g, --background      Does not bring the application to the foreground.
+      -h, --header          Searches header file locations for headers matching the given filenames, and opens them.
+      -s                    For -h, the SDK to use; if supplied, only SDKs whose names contain the argument value are searched.
+                            Otherwise the highest versioned SDK in each platform is used.
+      -i, --stdin  PATH     Launches the application with stdin connected to PATH; defaults to /dev/null
+      -o, --stdout PATH     Launches the application with /dev/stdout connected to PATH; 
+          --stderr PATH     Launches the application with /dev/stderr connected to PATH to
+          --env    VAR      Add an enviroment variable to the launched process, where VAR is formatted AAA=foo or just AAA for a null string value.
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ 
+  [Restored Jul 24, 2023 15:42:46]
+Last login: Mon Jul 24 15:42:39 on console
+-bash: /Users/nicolaskojima/.bash_profile: line 34: unexpected EOF while looking for matching `"'
+-bash: /Users/nicolaskojima/.bash_profile: line 35: syntax error: unexpected end of file
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ [15:45] バイシュラコフ テミルラン
+-bash: [15:45]: command not found
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ 
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+==> Checking for `sudo` access (which may request your password)...
+Password:
+==> This script will install:
+/usr/local/bin/brew
+/usr/local/share/doc/homebrew
+/usr/local/share/man/man1/brew.1
+/usr/local/share/zsh/site-functions/_brew
+/usr/local/etc/bash_completion.d/brew
+/usr/local/Homebrew
+
+Press RETURN/ENTER to continue or any other key to abort:
+==> /usr/bin/sudo /usr/sbin/chown -R nicolaskojima:admin /usr/local/Homebrew
+==> Downloading and installing Homebrew...
+Updating files: 100% (2782/2782), done.
+HEAD is now at b1169d58a Merge pull request #15742 from branchvincent/std_pip_args
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics data has been sent yet (nor will any be during this install run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Next steps:
+- Run these two commands in your terminal to add Homebrew to your PATH:
+    (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/nicolaskojima/.zprofile
+    eval "$(/usr/local/bin/brew shellenv)"
+- Run brew help to get started
+- Further documentation:
+    https://docs.brew.sh
+
+(base) Nicolass-MacBook-Air:~ nicolaskojima$  (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/nicolaskojima/.zprofile
+(base) Nicolass-MacBook-Air:~ nicolaskojima$     eval "$(/usr/local/bin/brew shellenv)"
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ 
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"')
+
+eval "$(/usr/local/bin/brew shellenv)"
+(base) Nicolass-MacBook-Air:~ nicolaskojima$     (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/nicolaskojima/.zprofile
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ 
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ eval "$(/usr/local/bin/brew shellenv)"
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew install php 
+==> Fetching php
+==> Downloading https://ghcr.io/v2/homebrew/core/php/manifests/8.2.8
+Already downloaded: /Users/nicolaskojima/Library/Caches/Homebrew/downloads/2d5a2cfff6d90b3586c240825ba0f8530ac8a38dcf1d9eb8f0e3fd03c2ef448c--php-8.2.8.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/php/blobs/sha256:4aba8baa472a8a0986d1b545e6455fc9da886a8a0b85b70dbcaa4f4f8c1f6fb4
+Already downloaded: /Users/nicolaskojima/Library/Caches/Homebrew/downloads/49910a0c0e0b29b87d06b9b27f84201153a83b0c443f58cac44c7df04ed2b2a1--php--8.2.8.big_sur.bottle.tar.gz
+==> Pouring php--8.2.8.big_sur.bottle.tar.gz
+Unlinking /usr/local/Cellar/php@8.0/8.0.29_1... 25 symlinks removed.
+==> /usr/local/Cellar/php/8.2.8/bin/pear config-set php_ini /usr/local/etc/php/8.2/php.ini system
+==> /usr/local/Cellar/php/8.2.8/bin/pear config-set php_dir /usr/local/share/pear system
+==> /usr/local/Cellar/php/8.2.8/bin/pear config-set doc_dir /usr/local/share/pear/doc system
+==> /usr/local/Cellar/php/8.2.8/bin/pear config-set ext_dir /usr/local/lib/php/pecl/20220829 system
+==> /usr/local/Cellar/php/8.2.8/bin/pear config-set bin_dir /usr/local/opt/php/bin system
+==> /usr/local/Cellar/php/8.2.8/bin/pear config-set data_dir /usr/local/share/pear/data system
+==> /usr/local/Cellar/php/8.2.8/bin/pear config-set cfg_dir /usr/local/share/pear/cfg system
+==> /usr/local/Cellar/php/8.2.8/bin/pear config-set www_dir /usr/local/share/pear/htdocs system
+==> /usr/local/Cellar/php/8.2.8/bin/pear config-set man_dir /usr/local/share/man system
+==> /usr/local/Cellar/php/8.2.8/bin/pear config-set test_dir /usr/local/share/pear/test system
+==> /usr/local/Cellar/php/8.2.8/bin/pear config-set php_bin /usr/local/opt/php/bin/php system
+==> /usr/local/Cellar/php/8.2.8/bin/pear update-channels
+==> Caveats
+To enable PHP in Apache add the following to httpd.conf and restart Apache:
+    LoadModule php_module /usr/local/opt/php/lib/httpd/modules/libphp.so
+
+    <FilesMatch \.php$>
+        SetHandler application/x-httpd-php
+    </FilesMatch>
+
+Finally, check DirectoryIndex includes index.php
+    DirectoryIndex index.php index.html
+
+The php.ini and php-fpm.ini file can be found in:
+    /usr/local/etc/php/8.2/
+
+To start php now and restart at login:
+  brew services start php
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/php/sbin/php-fpm --nodaemonize
+==> Summary
+🍺  /usr/local/Cellar/php/8.2.8: 520 files, 81.9MB
+==> Running `brew cleanup php`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v 
+PHP 8.2.8 (cli) (built: Jul  6 2023 11:18:14) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.2.8, Copyright (c) Zend Technologies
+    with Zend OPcache v8.2.8, Copyright (c), by Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew unlink php@8.2.8
+Error: No such keg: /usr/local/Cellar/php@8.2.8
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+PHP 8.2.8 (cli) (built: Jul  6 2023 11:18:14) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.2.8, Copyright (c) Zend Technologies
+    with Zend OPcache v8.2.8, Copyright (c), by Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew unlink php@8.2.8
+Error: No such keg: /usr/local/Cellar/php@8.2.8
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew link php@8.0
+Linking /usr/local/Cellar/php@8.0/8.0.29_1... 
+Error: Could not symlink bin/pear
+Target /usr/local/bin/pear
+is a symlink belonging to php. You can unlink it:
+  brew unlink php
+
+To force the link and overwrite all conflicting files:
+  brew link --overwrite php@8.0
+
+To list all files that would be deleted:
+  brew link --overwrite --dry-run php@8.0
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+PHP 8.2.8 (cli) (built: Jul  6 2023 11:18:14) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.2.8, Copyright (c) Zend Technologies
+    with Zend OPcache v8.2.8, Copyright (c), by Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew link --overwrite --dry-run php@8.0
+Would remove:
+/usr/local/bin/pear -> /usr/local/Cellar/php/8.2.8/bin/pear
+/usr/local/bin/peardev -> /usr/local/Cellar/php/8.2.8/bin/peardev
+/usr/local/bin/pecl -> /usr/local/Cellar/php/8.2.8/bin/pecl
+/usr/local/bin/phar -> /usr/local/Cellar/php/8.2.8/bin/phar
+/usr/local/bin/phar.phar -> /usr/local/Cellar/php/8.2.8/bin/phar.phar
+/usr/local/bin/php -> /usr/local/Cellar/php/8.2.8/bin/php
+/usr/local/bin/php-cgi -> /usr/local/Cellar/php/8.2.8/bin/php-cgi
+/usr/local/bin/php-config -> /usr/local/Cellar/php/8.2.8/bin/php-config
+/usr/local/bin/phpdbg -> /usr/local/Cellar/php/8.2.8/bin/phpdbg
+/usr/local/bin/phpize -> /usr/local/Cellar/php/8.2.8/bin/phpize
+/usr/local/sbin/php-fpm -> /usr/local/Cellar/php/8.2.8/sbin/php-fpm
+Error: Could not symlink include/php/TSRM/TSRM.h
+Target /usr/local/include/php/TSRM/TSRM.h
+is a symlink belonging to php. You can unlink it:
+  brew unlink php
+
+To force the link and overwrite all conflicting files:
+  brew link --overwrite php
+
+To list all files that would be deleted:
+  brew link --overwrite --dry-run php
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+PHP 8.2.8 (cli) (built: Jul  6 2023 11:18:14) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.2.8, Copyright (c) Zend Technologies
+    with Zend OPcache v8.2.8, Copyright (c), by Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew link --overwrite php@8.0
+brewLinking /usr/local/Cellar/php@8.0/8.0.29_1...  822 symlinks created.
+
+If you need to have this software first in your PATH instead consider running:
+  echo 'export PATH="/usr/local/opt/php@8.0/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="/usr/local/opt/php@8.0/sbin:$PATH"' >> ~/.zshrc
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+PHP 8.0.29 (cli) (built: Jun 15 2023 05:37:30) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v4.0.29, Copyright (c) Zend Technologies
+    with Zend OPcache v8.0.29, Copyright (c), by Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ $ sudo chmod -R 777 /Applications/XAMPP/xamppfiles/htdocs/ec-cube
+-bash: $: command not found
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew link --overwrite php@7.8
+Error: No such keg: /usr/local/Cellar/php@7.8
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew link --overwrite php@7.9
+Error: No such keg: /usr/local/Cellar/php@7.9
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew link --overwrite php@7.8
+Error: No such keg: /usr/local/Cellar/php@7.8
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+PHP 8.0.29 (cli) (built: Jun 15 2023 05:37:30) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v4.0.29, Copyright (c) Zend Technologies
+    with Zend OPcache v8.0.29, Copyright (c), by Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew link --overwrite php@7.4
+Linking /usr/local/Cellar/php@7.4/7.4.33_4... 328 symlinks created.
+
+If you need to have this software first in your PATH instead consider running:
+  echo 'export PATH="/usr/local/opt/php@7.4/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="/usr/local/opt/php@7.4/sbin:$PATH"' >> ~/.zshrc
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+PHP 7.4.33 (cli) (built: Jul 13 2023 19:23:33) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v3.4.0, Copyright (c) Zend Technologies
+    with Zend OPcache v7.4.33, Copyright (c), by Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew link --overwrite php@8.0
+Warning: Already linked: /usr/local/Cellar/php@8.0/8.0.29_1
+To relink, run:
+  brew unlink php@8.0 && brew link --force php@8.0
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php-v
+-bash: php-v: command not found
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+PHP 7.4.33 (cli) (built: Jul 13 2023 19:23:33) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v3.4.0, Copyright (c) Zend Technologies
+    with Zend OPcache v7.4.33, Copyright (c), by Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$  brew unlink php@8.0 && brew link --force php@8.0
+Unlinking /usr/local/Cellar/php@8.0/8.0.29_1... 25 symlinks removed.
+Unlinking /usr/local/Cellar/php@7.4/7.4.33_4... 328 symlinks removed.
+Linking /usr/local/Cellar/php@8.0/8.0.29_1... 242 symlinks created.
+
+If you need to have this software first in your PATH instead consider running:
+  echo 'export PATH="/usr/local/opt/php@8.0/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="/usr/local/opt/php@8.0/sbin:$PATH"' >> ~/.zshrc
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+PHP 8.0.29 (cli) (built: Jun 15 2023 05:37:30) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v4.0.29, Copyright (c) Zend Technologies
+    with Zend OPcache v8.0.29, Copyright (c), by Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ php -v
+PHP 8.0.29 (cli) (built: Jun 15 2023 05:37:30) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v4.0.29, Copyright (c) Zend Technologies
+    with Zend OPcache v8.0.29, Copyright (c), by Zend Technologies
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ brew install git-lfs
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+############################################################################################# 100.0%
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+############################################################################################# 100.0%
+==> Fetching git-lfs
+==> Downloading https://ghcr.io/v2/homebrew/core/git-lfs/manifests/3.3.0
+############################################################################################# 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/git-lfs/blobs/sha256:c215057bd7ebb8535d58690798effe
+############################################################################################# 100.0%
+==> Pouring git-lfs--3.3.0.big_sur.bottle.tar.gz
+==> Caveats
+Update your git config to finish installation:
+
+  # Update global git config
+  $ git lfs install
+
+  # Update system git config
+  $ git lfs install --system
+==> Summary
+🍺  /usr/local/Cellar/git-lfs/3.3.0: 76 files, 12.8MB
+==> Running `brew cleanup git-lfs`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ git lfs track "*.csv"
+Not in a Git repository.
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ 
+(base) Nicolass-MacBook-Air:~ nicolaskojima$  git add .gitattributes
+fatal: not a git repository (or any of the parent directories): .git
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ ls
+Applications		External		Next.			Sites
+Cross-Platform		Library			Pictures		app-name
+Desktop			Movies			Postman			composer.phar
+Documents		Music			Project			iCloud Drive (Archive)
+Downloads		New			Public
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ cd Documents/
+.DS_Store              League of Legends/     XAMPP                  personal files/
+.localized             MuseScore4/            Zoom/                  projects/
+C_Club/                Wizard101/             archive/               school/
+IRIS/                  Work/                  coding/                ~$terview format.docx
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ cd Documents/coding/
+.DS_Store  HTML/      PHP/       downloads/ laravel/   postman/   python/    
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ cd Documents/coding/PHP/
+.DS_Store  MAMP       MAMP.pkg   XAMPP      XAMPP.dmg  php-8.2.8/ 
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ cd Documents/coding/PHP/MAMP
+MAMP      MAMP.pkg  
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ cd Documents/coding/PHP/MAMP/MAMP
+-bash: cd: Documents/coding/PHP/MAMP/MAMP: Not a directory
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ ls
+Applications		External		Next.			Sites
+Cross-Platform		Library			Pictures		app-name
+Desktop			Movies			Postman			composer.phar
+Documents		Music			Project			iCloud Drive (Archive)
+Downloads		New			Public
+(base) Nicolass-MacBook-Air:~ nicolaskojima$ cd documents
+(base) Nicolass-MacBook-Air:documents nicolaskojima$ ls
+C_Club			Wizard101		archive			school
+IRIS			Work			coding			~$terview format.docx
+League of Legends	XAMPP			personal files
+MuseScore4		Zoom			projects
+(base) Nicolass-MacBook-Air:documents nicolaskojima$ cd coding
+(base) Nicolass-MacBook-Air:coding nicolaskojima$ ls
+HTML		PHP		downloads	laravel		postman		python
+(base) Nicolass-MacBook-Air:coding nicolaskojima$ cd PHP
+(base) Nicolass-MacBook-Air:PHP nicolaskojima$ ls
+MAMP		MAMP.pkg	XAMPP		XAMPP.dmg	php-8.2.8
+(base) Nicolass-MacBook-Air:PHP nicolaskojima$ cd MAMP
+-bash: cd: MAMP: Not a directory
+(base) Nicolass-MacBook-Air:PHP nicolaskojima$ ls
+MAMP		MAMP.pkg	XAMPP		XAMPP.dmg	php-8.2.8
+(base) Nicolass-MacBook-Air:PHP nicolaskojima$ cd XAMPP
+-bash: cd: XAMPP: Not a directory
